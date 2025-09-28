@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lev Marienbakh</title>
+  <meta name="description" content="Writing, projects, and contact for Lev Marienbakh." />
+  <style>
+    /* PG-style: clean, text-first, no JS, minimal CSS */
+    :root {
+      --max: 720px;
+      --pad: 18px;
+      --fg: #111;
+      --muted: #666;
+      --link: #0645AD; /* default browser-ish link blue */
+    }
+    html { font-size: 18px; }
+    body {
+      margin: 0 auto; padding: var(--pad);
+      max-width: var(--max); line-height: 1.55;
+      color: var(--fg);
+      font-family: Georgia, "Times New Roman", Times, serif;
+      background: #fff;
+    }
+    a { color: var(--link); text-decoration: underline; }
+    header { margin: 8px 0 20px; }
+    h1 { font-size: 1.8rem; margin: 0; font-weight: 700; }
+    .sub { color: var(--muted); font-size: 0.95rem; margin-top: 4px; }
+    nav { margin-top: 10px; }
+    nav a { margin-right: 12px; }
+    hr { border: 0; border-top: 1px solid #ddd; margin: 18px 0; }
+    h2 { font-size: 1.2rem; margin: 18px 0 8px; }
+    ul { padding-left: 18px; }
+    time { color: var(--muted); font-variant-numeric: tabular-nums; }
+    footer { color: var(--muted); font-size: 0.9rem; margin-top: 28px; }
+    /* print: readable */
+    @media print { a { color: inherit; } nav { display: none; } }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Lev Marienbakh</h1>
+    <div class="sub">
+      writing & projects · <a href="mailto:lev.marienbakh@gmail.com">lev.marienbakh@gmail.com</a> · 
+      <a href="https://www.linkedin.com/in/lev-marienbakh">linkedin</a>
+    </div>
+    <nav>
+      <a href="#writing">writing</a>
+      <a href="#projects">projects</a>
+      <a href="#about">about</a>
+    </nav>
+  </header>
+
+  <hr />
+
+  <section id="writing">
+    <h2>Writing</h2>
+    <ul>
+      <!-- Replace with real posts; keep simple titles + dates. Newest first. -->
+      <li>
+        <a href="posts/consumption-wellbeing.html">Consumption vs wellbeing isn’t monotone</a>
+        <span>· <time datetime="2025-09-28">28 Sep 2025</time></span>
+      </li>
+      <li>
+        <a href="posts/private-credit-and-banks.html">Where private credit fits in the plumbing</a>
+        <span>· <time datetime="2025-09-29">29 Sep 2025</time></span>
+      </li>
+      <li>
+        <a href="posts/rural-poverty-china.html">What poverty campaigns miss in rural China</a>
+        <span>· <time datetime="2025-09-25">25 Sep 2025</time></span>
+      </li>
+    </ul>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <ul>
+      <li><a href="files/Lev_Marienbakh_CV.pdf">CV</a> (1–2 pages)</li>
+      <li><a href="projects/bank-vulnerability-index.html">Bank Vulnerability Index (CN)</a> (note)</li>
+      <li><a href="projects/roll-up-case-notes.html">Roll-up case notes</a> (fragments)</li>
+    </ul>
+  </section>
+
+  <section id="about">
+    <h2>About</h2>
+    <p>I study finance & economics at UQ. Interested in financial plumbing, institutions, and how culture leaks into markets. I like clean arguments, small websites, and surfing.</p>
+  </section>
+
+  <footer>
+    <hr />
+    <div>© <span id="y"></span> Lev Marienbakh · plain HTML · <a href="/sitemap.txt">sitemap</a></div>
+  </footer>
+
+  <script>
+    // keeps year current without adding complexity
+    document.getElementById('y').textContent = new Date().getFullYear();
+  </script>
+
+  <!--
+  HOW TO ADD A POST (PG-style, no builds):
+  1) Create /posts/your-post.html with simple HTML like below.
+  2) Link it above (newest first). Keep titles short; add <time>.
+
+  Example post template (save as posts/example.html):
+  ---------------------------------------------------
+  <!doctype html>
+  <html lang="en"><head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Post Title – Lev Marienbakh</title>
+    <style>body{max-width:720px;margin:0 auto;padding:18px;line-height:1.55;font-family:Georgia,serif;color:#111}</style>
+  </head><body>
+    <h1>Post Title</h1>
+    <p><time datetime="2025-09-28">28 Sep 2025</time></p>
+    <hr />
+    <p>Write long-form in plain paragraphs. Use <em>italics</em> and <strong>bold</strong> sparingly. No JS needed.</p>
+    <p><a href="../index.html">← back</a></p>
+  </body></html>
+  ---------------------------------------------------
+
+  OPTIONAL EXTRAS:
+  - Create /sitemap.txt with one URL per line for SEO.
+  - Create /robots.txt with: User-agent: *  \n Allow: /
+  - Redirect root domain to www (or vice versa) via your DNS provider (A/AAAA/CNAME).
+  - Host on GitHub Pages, Cloudflare Pages, or Netlify. No build step required.
+  -->
+</body>
+</html>
